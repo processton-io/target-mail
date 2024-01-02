@@ -11,18 +11,18 @@
         "ext-zip": "*",
         "aws/aws-sdk-php-laravel": "^3.8",
         "doctrine/dbal": "^3.7",
-        "illuminate/support": "^8.0",
+        "illuminate/support": "^10.39",
         "kriswallsmith/buzz": "^1.2",
         "mailgun/mailgun-php": "^3.6",
         "mailjet/mailjet-apiv3-php": "^1.6",
         "nyholm/psr7": "^1.8",
-        "rap2hpoutre/fast-excel": "^2.5",
+        "postal/postal": "^1.0",
+        "rap2hpoutre/fast-excel": "^5.3",
         "sendgrid/sendgrid": "^7.11",
-        "wildbit/postmark-php": "^4.0",
-        "postal/postal": "^1.0"
+        "wildbit/postmark-php": "^4.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.41",
+        "orchestra/testbench": "^8.19",
         "phpunit/phpunit": "^9.6",
         "roave/security-advisories": "dev-master"
     },
