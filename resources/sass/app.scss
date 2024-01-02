@@ -275,6 +275,7 @@ a.color-purple-500 {
                 border-left-color: $purple-100;
                 border-radius: 6px;
                 display: block;
+                cursor: pointer;
 
                 .fas {
                     color: darken($light-blue, 20%);
@@ -288,14 +289,20 @@ a.color-purple-500 {
                 
             .sidebar-submenu {
                 display:none;
-                background: lighten($purple-100, 10%);
-                border-left-color: lighten($purple-100, 10%);
                 padding-left: 0.7rem;
                 .fas {
                     color: darken($light-blue, 20%);
                 }
                 &.active {
                     display:block !important;
+                }
+
+                ul {
+                    li {
+                        a.nav-link{
+                            padding: 0.5rem 0 0.5rem 0.5rem !important;
+                        }
+                    }
                 }
             }
         }
