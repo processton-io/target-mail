@@ -918,7 +918,7 @@ a.color-purple-500:active {
   color: #ffffff;
   font-weight: normal;
   font-size: 0.9rem;
-  padding: 0.7rem 0 0.7em 0.7rem;
+  padding: 0.7rem 0 0.7rem 0.7rem;
   border-left: 6px solid;
   border-left-color: #1E2442;
   border-radius: 6px;
@@ -958,7 +958,7 @@ a.color-purple-500:active {
   color: #ffffff;
   font-weight: normal;
   font-size: 0.9rem;
-  padding: 0.7rem 0 0.7em 0.7;
+  padding: 0.7rem 0 0.7rem 0.7rem;
   border-left: 6px solid;
   border-left-color: #1E2442;
   border-radius: 6px;
@@ -974,18 +974,18 @@ a.color-purple-500:active {
   border-left-color: #2e3765;
 }
 
-.sidebar li.sidebar-dropdown a.sidebar-link .sidebar-submenu {
+.sidebar li.sidebar-dropdown .sidebar-submenu {
   display: none;
   background: #2e3765;
   border-left-color: #2e3765;
   padding-left: 0.7rem;
 }
 
-.sidebar li.sidebar-dropdown a.sidebar-link .sidebar-submenu .fas {
+.sidebar li.sidebar-dropdown .sidebar-submenu .fas {
   color: #7c97a4;
 }
 
-.sidebar li.sidebar-dropdown a.sidebar-link .sidebar-submenu.active {
+.sidebar li.sidebar-dropdown .sidebar-submenu.active {
   display: block !important;
 }
 

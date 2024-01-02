@@ -227,7 +227,7 @@ a.color-purple-500 {
                 color: $white;
                 font-weight: normal;
                 font-size: 0.9rem;
-                padding: 0.7rem 0 0.7em 0.7rem;
+                padding: 0.7rem 0 0.7rem 0.7rem;
                 border-left: 6px solid;
                 border-left-color: $purple-100;
                 border-radius: 6px;
@@ -270,7 +270,7 @@ a.color-purple-500 {
                 color: $white;
                 font-weight: normal;
                 font-size: 0.9rem;
-                padding: 0.7rem 0 0.7em 0.7;
+                padding: 0.7rem 0 0.7rem 0.7rem;
                 border-left: 6px solid;
                 border-left-color: $purple-100;
                 border-radius: 6px;
@@ -284,18 +284,18 @@ a.color-purple-500 {
                     background: lighten($purple-100, 10%);
                     border-left-color: lighten($purple-100, 10%);
                 }
+            }
                 
-                .sidebar-submenu {
-                    display:none;
-                    background: lighten($purple-100, 10%);
-                    border-left-color: lighten($purple-100, 10%);
-                    padding-left: 0.7rem;
-                    .fas {
-                        color: darken($light-blue, 20%);
-                    }
-                    &.active {
-                        display:block !important;
-                    }
+            .sidebar-submenu {
+                display:none;
+                background: lighten($purple-100, 10%);
+                border-left-color: lighten($purple-100, 10%);
+                padding-left: 0.7rem;
+                .fas {
+                    color: darken($light-blue, 20%);
+                }
+                &.active {
+                    display:block !important;
                 }
             }
         }
