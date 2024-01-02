@@ -268,7 +268,6 @@ a.color-purple-500 {
 
             a.sidebar-link {
                 color: $white;
-                display:none;
                 font-weight: normal;
                 font-size: 0.9rem;
                 padding: 0.7rem 0 0.7em 1.2rem;
@@ -284,18 +283,28 @@ a.color-purple-500 {
                     background: lighten($purple-100, 10%);
                     border-left-color: lighten($purple-100, 10%);
                 }
-            }
-
-            &.active {
-
-                a.sidebar-link {
-                    display:block;
-                    color: $white;
-                    background: lighten($purple-100, 10%);
-                    border-left-color: $purple-500;
-
+                
+                .sidebar-submenu {
+                    display:none;
                     .fas {
-                        color: $white;
+                        color: darken($light-blue, 20%);
+                    }
+
+                    &:hover {
+                        background: lighten($purple-100, 10%);
+                        border-left-color: lighten($purple-100, 10%);
+                    }
+                }
+
+                .sidebar-submenu.active {
+                    display:block;
+                    .fas {
+                        color: darken($light-blue, 20%);
+                    }
+
+                    &:hover {
+                        background: lighten($purple-100, 10%);
+                        border-left-color: lighten($purple-100, 10%);
                     }
                 }
             }
