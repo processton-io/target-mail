@@ -10,16 +10,14 @@
                 <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Campaigns') }}</span>
             </a>
         </li>
-        @if (\Sendportal\Base\Facades\Helper::isPro())
-        <li class="nav-item {{ request()->is('*automations*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('sendportal.automations.index') }}">
-                <i class="fa-fw fas fa-sync-alt mr-2"></i><span>{{ __('Automations') }}</span>
+        <li class="nav-item {{ request()->is('*froms*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('sendportal.campaigns.index') }}">
+                <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Forms') }}</span>
             </a>
         </li>
-        @endif
-        <li class="nav-item {{ request()->is('*templates*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('sendportal.templates.index') }}">
-                <i class="fa-fw fas fa-file-alt mr-2"></i><span>{{ __('Templates') }}</span>
+        <li class="nav-item {{ request()->is('*notifications*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('sendportal.notifications.index') }}">
+                <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Notifications') }}</span>
             </a>
         </li>
         <li class="nav-item {{ request()->is('*subscribers*') ? 'active' : '' }}">
@@ -32,11 +30,22 @@
                 <i class="fa-fw fas fa-paper-plane mr-2"></i><span>{{ __('Messages') }}</span>
             </a>
         </li>
-        <li class="nav-item {{ request()->is('*email-services*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('sendportal.email_services.index') }}">
-                <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Email Services') }}</span>
+        <li class="sidebar-dropdown nav-item {{ request()->is('*settings*') ? 'active' : '' }}">
+            <a href="#">
+                <i class="fa fa-tachometer-alt"></i>
+                <span>{{ __('Settings') }}</span>
             </a>
+            <div class="sidebar-submenu" style="display: block;">
+                <ul>
+                    <li class="nav-item {{ request()->is('*email-services*') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('sendportal.email_services.index') }}">
+                            <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Email Services') }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </li>
+        
 
         {!! \Sendportal\Base\Facades\Sendportal::sidebarHtmlContent() !!}
 
