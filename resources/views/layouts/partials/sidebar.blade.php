@@ -16,7 +16,7 @@
             </a>
         </li>
         <li class="nav-item {{ request()->is('*notifications*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('sendportal.notifications.index') }}">
+            <a class="nav-link" href="{{ route('sendportal.subscribers.index') }}">
                 <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Notifications') }}</span>
             </a>
         </li>
