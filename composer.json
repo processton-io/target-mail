@@ -11,7 +11,7 @@
         "ext-zip": "*",
         "aws/aws-sdk-php-laravel": "^3.8",
         "doctrine/dbal": "^3.7",
-        "illuminate/support": "^10.39",
+        "illuminate/support": "^9.30",
         "kriswallsmith/buzz": "^1.2",
         "mailgun/mailgun-php": "^3.6",
         "mailjet/mailjet-apiv3-php": "^1.6",
@@ -22,7 +22,7 @@
         "wildbit/postmark-php": "^4.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^8.19",
+        "orchestra/testbench": "^7.39",
         "phpunit/phpunit": "^9.6",
         "roave/security-advisories": "dev-master"
     },
