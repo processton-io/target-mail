@@ -30,12 +30,12 @@
                 <i class="fa-fw fas fa-paper-plane mr-2"></i><span>{{ __('Messages') }}</span>
             </a>
         </li>
-        <li class="sidebar-dropdown nav-item {{ request()->is('*settings*') ? 'active' : '' }}">
-            <a href="#">
+        <li class="sidebar-dropdown" id="settings-dropdown">
+            <a class="sidebar-link" onclick="document.getElementById('settings-dropdown').classList.toggle('active');">
                 <i class="fa fa-tachometer-alt"></i>
                 <span>{{ __('Settings') }}</span>
             </a>
-            <div class="sidebar-submenu" style="display: block;">
+            <div class="sidebar-submenu">
                 <ul>
                     <li class="nav-item {{ request()->is('*email-services*') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('sendportal.email_services.index') }}">
