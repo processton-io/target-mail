@@ -1,0 +1,27 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app.js",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/assets/vite.svg": {
+    "file": "assets/vite.svg",
+    "src": "resources/js/assets/vite.svg"
+  },
+  "resources/js/assets/vue.svg": {
+    "file": "assets/vue.svg",
+    "src": "resources/js/assets/vue.svg"
+  },
+  "resources/js/main.ts": {
+    "assets": [
+      "assets/vite.svg",
+      "assets/vue.svg"
+    ],
+    "css": [
+      "assets/main.css"
+    ],
+    "file": "assets/main.js",
+    "isEntry": true,
+    "src": "resources/js/main.ts"
+  }
+}
