@@ -11,7 +11,7 @@
             </a>
         </li>
         <li class="nav-item {{ request()->is('*froms*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('sendportal.campaigns.index') }}">
+            <a class="nav-link" href="{{ route('sendportal.forms') }}">
                 <i class="fa-fw fas fa-envelope mr-2"></i><span>{{ __('Forms') }}</span>
             </a>
         </li>
