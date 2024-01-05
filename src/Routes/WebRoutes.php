@@ -50,6 +50,8 @@ class WebRoutes
                 // Dashboard.
                 $appRouter->get('/', 'DashboardController@index')->name('dashboard');
 
+                $appRouter->get('/forms', 'Forms\FormsController@index')->name('dashboard');
+
                 // Campaigns.
                 $appRouter->resource('campaigns', 'Campaigns\CampaignsController')->except(['show', 'destroy']);
                 $appRouter->name('campaigns.')->prefix('campaigns')->namespace('Campaigns')->group(static function (
