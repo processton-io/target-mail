@@ -21,18 +21,18 @@
     "dynamicImports": [
       "resources/data/forms/templates/industries.json",
       "resources/data/forms/templates/types.json",
-      "resources/js/pages/home.vue.ts"
+      "resources/js/pages/home.vue"
     ],
     "file": "assets/main.js",
     "isEntry": true,
     "src": "resources/js/main.ts"
   },
-  "resources/js/pages/home.vue.ts": {
-    "file": "assets/home.vue.js",
+  "resources/js/pages/home.vue": {
+    "file": "assets/home.js",
     "imports": [
       "resources/js/main.ts"
     ],
     "isDynamicEntry": true,
-    "src": "resources/js/pages/home.vue.ts"
+    "src": "resources/js/pages/home.vue"
   }
 }

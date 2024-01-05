@@ -144,6 +144,37 @@ const isSpecialBooleanAttr = /* @__PURE__ */ makeMap(specialBooleanAttrs);
 function includeBooleanAttr(value) {
   return !!value || value === "";
 }
+const toDisplayString = (val) => {
+  return isString$1(val) ? val : val == null ? "" : isArray$2(val) || isObject$2(val) && (val.toString === objectToString$1 || !isFunction$1(val.toString)) ? JSON.stringify(val, replacer, 2) : String(val);
+};
+const replacer = (_key, val) => {
+  if (val && val.__v_isRef) {
+    return replacer(_key, val.value);
+  } else if (isMap(val)) {
+    return {
+      [`Map(${val.size})`]: [...val.entries()].reduce(
+        (entries, [key, val2], i) => {
+          entries[stringifySymbol(key, i) + " =>"] = val2;
+          return entries;
+        },
+        {}
+      )
+    };
+  } else if (isSet(val)) {
+    return {
+      [`Set(${val.size})`]: [...val.values()].map((v2) => stringifySymbol(v2))
+    };
+  } else if (isSymbol(val)) {
+    return stringifySymbol(val);
+  } else if (isObject$2(val) && !isArray$2(val) && !isPlainObject$2(val)) {
+    return String(val);
+  }
+  return val;
+};
+const stringifySymbol = (v2, i = "") => {
+  var _a;
+  return isSymbol(v2) ? `Symbol(${(_a = v2.description) != null ? _a : i})` : v2;
+};
 let activeEffectScope;
 class EffectScope {
   constructor(detached = false) {
@@ -6462,7 +6493,7 @@ const isHTMLForm = kindOfTest("HTMLFormElement");
 const toCamelCase = (str) => {
   return str.toLowerCase().replace(
     /[-_\s]([a-z\d])(\w*)/g,
-    function replacer(m2, p1, p2) {
+    function replacer2(m2, p1, p2) {
       return p1.toUpperCase() + p2;
     }
   );
@@ -6804,7 +6835,7 @@ function encode$1(str) {
     "%20": "+",
     "%00": "\0"
   };
-  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match) {
+  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer2(match) {
     return charMap[match];
   });
 }
@@ -10329,7 +10360,7 @@ __publicField(_J, "create", (t, e, o2) => {
   return new _J(t, e, r2, o2);
 });
 let J = _J;
-const pages = /* @__PURE__ */ Object.assign({ "../pages/home.vue.ts": () => __vitePreload(() => import("./home.vue.js"), true ? __vite__mapDeps([]) : void 0) });
+const pages = /* @__PURE__ */ Object.assign({ "../pages/home.vue": () => __vitePreload(() => import("./home.js"), true ? __vite__mapDeps([]) : void 0) });
 function page(path) {
   return pages[`../pages/${path}`];
 }
@@ -13781,7 +13812,9 @@ function resolveMiddleware(requireContext2) {
 }
 createApp(App).use(i18n).use(store).mixin(Base).mixin(router).mixin(meta).mount("#app");
 export {
-  defineComponent as d
+  defineComponent as d,
+  ref as r,
+  toDisplayString as t
 };
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
