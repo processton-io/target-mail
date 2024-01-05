@@ -1,1 +1,21 @@
-import{d as t}from"./main.js";const n=t({props:{name:String,msg:{type:String,required:!0}},data(){return{count:1}},mounted(){this.name,this.msg,this.count}});export{n as default};
+import { d as defineComponent } from "./main.js";
+const home_vue = defineComponent({
+  // type inference enabled
+  props: {
+    name: String,
+    msg: { type: String, required: true }
+  },
+  data() {
+    return {
+      count: 1
+    };
+  },
+  mounted() {
+    this.name;
+    this.msg;
+    this.count;
+  }
+});
+export {
+  home_vue as default
+};
