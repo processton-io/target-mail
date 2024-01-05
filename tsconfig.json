@@ -5,9 +5,10 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,8 +19,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./resources/*"]
+    }
   },
-  "include": ["resources/**/*.ts", "resources/**/*.tsx", "resources/**/*.vue", "resources/js/vite-env.d.ts", "resources/js/main.ts"],
+  "include": ["resources/**/*.ts", "resources/**/*.tsx", "resources/**/*.vue", "resources/js/vite-env.d.ts", "resources/js/main.ts", "resources/js/plugins/i18n.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

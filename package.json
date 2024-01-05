@@ -10,10 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sentry/vue": "^7.92.0",
+    "axios": "^1.6.5",
+    "debounce": "^2.0.0",
+    "fuse.js": "^7.0.0",
+    "js-cookie": "^3.0.5",
     "laravel-vite-plugin": "^1.0.1",
-    "vue": "^3.3.11"
+    "vform": "^2.1.2",
+    "vue": "^3.3.11",
+    "vue-confetti": "^2.3.0",
+    "vue-fuse": "^4.1.1",
+    "vue-meta": "^3.0.0-alpha.10",
+    "vue-router": "^4.2.5",
+    "vue3-i18n": "^1.1.5",
+    "vuex": "^4.0.2",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",

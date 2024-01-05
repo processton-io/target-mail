@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
+import path from 'path'
 import laravel from 'laravel-vite-plugin';
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +14,11 @@ export default defineConfig({
         refresh: true,
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './resources'),
+    },
+  },
   build: {
     rollupOptions: {
       output: {

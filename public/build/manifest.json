@@ -4,24 +4,35 @@
     "isEntry": true,
     "src": "resources/css/app.css"
   },
-  "resources/js/assets/vite.svg": {
-    "file": "assets/vite.svg",
-    "src": "resources/js/assets/vite.svg"
+  "resources/data/forms/templates/industries.json": {
+    "file": "assets/industries.js",
+    "isDynamicEntry": true,
+    "src": "resources/data/forms/templates/industries.json"
   },
-  "resources/js/assets/vue.svg": {
-    "file": "assets/vue.svg",
-    "src": "resources/js/assets/vue.svg"
+  "resources/data/forms/templates/types.json": {
+    "file": "assets/types.js",
+    "isDynamicEntry": true,
+    "src": "resources/data/forms/templates/types.json"
   },
   "resources/js/main.ts": {
-    "assets": [
-      "assets/vite.svg",
-      "assets/vue.svg"
-    ],
     "css": [
       "assets/main.css"
+    ],
+    "dynamicImports": [
+      "resources/data/forms/templates/industries.json",
+      "resources/data/forms/templates/types.json",
+      "resources/js/pages/home.vue.ts"
     ],
     "file": "assets/main.js",
     "isEntry": true,
     "src": "resources/js/main.ts"
+  },
+  "resources/js/pages/home.vue.ts": {
+    "file": "assets/home.vue.js",
+    "imports": [
+      "resources/js/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/home.vue.ts"
   }
 }
