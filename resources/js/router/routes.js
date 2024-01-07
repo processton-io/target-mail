@@ -6,7 +6,7 @@ function page (path) {
 
 export default [
   // Logged Users
-  { path: "/home", name: "home", component: page("home.vue") },
+  { path: "/", name: "home", redirect: { name: "forms.show" } },
 
   // Forms
   {
@@ -14,11 +14,11 @@ export default [
     name: "forms.create",
     component: page("forms/create.vue"),
   },
-  {
-    path: "/forms/create/guest",
-    name: "forms.create.guest",
-    component: page("forms/create-guest.vue"),
-  },
+  // {
+  //   path: "/forms/create/guest",
+  //   name: "forms.create.guest",
+  //   component: page("forms/create-guest.vue"),
+  // },
   {
     path: "/forms/:slug/edit",
     name: "forms.edit",
@@ -48,84 +48,84 @@ export default [
   },
 
   // Subscription
-  {
-    path: "/subscriptions/success",
-    name: "subscriptions.success",
-    component: page("subscriptions/success.vue"),
-  },
-  {
-    path: "/subscriptions/error",
-    name: "subscriptions.error",
-    component: page("subscriptions/error.vue"),
-  },
+  // {
+  //   path: "/subscriptions/success",
+  //   name: "subscriptions.success",
+  //   component: page("subscriptions/success.vue"),
+  // },
+  // {
+  //   path: "/subscriptions/error",
+  //   name: "subscriptions.error",
+  //   component: page("subscriptions/error.vue"),
+  // },
 
   // Settings
-  {
-    path: "/settings",
-    component: page("settings/index.vue"),
-    children: [
-      { path: "", redirect: { name: "settings.workspaces" } },
-      {
-        path: "workspaces",
-        name: "settings.workspaces",
-        component: page("settings/workspace.vue"),
-      },
-      {
-        path: "workspaces/:slug/details",
-        name: "settings.workspaces.details",
-        component: page("settings/workspaceDetails.vue"),
-      },
-      {
-        path: "billing",
-        name: "settings.billing",
-        component: page("settings/billing.vue"),
-      },
-      {
-        path: "profile",
-        name: "settings.profile",
-        component: page("settings/profile.vue"),
-      },
-      {
-        path: "account",
-        name: "settings.account",
-        component: page("settings/account.vue"),
-      },
-      {
-        path: "password",
-        name: "settings.password",
-        component: page("settings/password.vue"),
-      },
-      {
-        path: "admin",
-        name: "settings.admin",
-        component: page("settings/admin.vue"),
-      },
-    ],
-  },
+  // {
+  //   path: "/settings",
+  //   component: page("settings/index.vue"),
+  //   children: [
+  //     { path: "", redirect: { name: "settings.workspaces" } },
+  //     {
+  //       path: "workspaces",
+  //       name: "settings.workspaces",
+  //       component: page("settings/workspace.vue"),
+  //     },
+  //     {
+  //       path: "workspaces/:slug/details",
+  //       name: "settings.workspaces.details",
+  //       component: page("settings/workspaceDetails.vue"),
+  //     },
+  //     {
+  //       path: "billing",
+  //       name: "settings.billing",
+  //       component: page("settings/billing.vue"),
+  //     },
+  //     {
+  //       path: "profile",
+  //       name: "settings.profile",
+  //       component: page("settings/profile.vue"),
+  //     },
+  //     {
+  //       path: "account",
+  //       name: "settings.account",
+  //       component: page("settings/account.vue"),
+  //     },
+  //     {
+  //       path: "password",
+  //       name: "settings.password",
+  //       component: page("settings/password.vue"),
+  //     },
+  //     {
+  //       path: "admin",
+  //       name: "settings.admin",
+  //       component: page("settings/admin.vue"),
+  //     },
+  //   ],
+  // },
 
-  // Auth Routes
-  { path: "/", name: "login", component: page("auth/login.vue") },
-  { path: "/register", name: "register", component: page("auth/register.vue") },
-  {
-    path: "/password/reset",
-    name: "password.request",
-    component: page("auth/password/email.vue"),
-  },
-  {
-    path: "/password/reset/:token",
-    name: "password.reset",
-    component: page("auth/password/reset.vue"),
-  },
-  {
-    path: "/email/verify/:id",
-    name: "verification.verify",
-    component: page("auth/verification/verify.vue"),
-  },
-  {
-    path: "/email/resend",
-    name: "verification.resend",
-    component: page("auth/verification/resend.vue"),
-  },
+  // // Auth Routes
+  // { path: "/", name: "login", component: page("auth/login.vue") },
+  // { path: "/register", name: "register", component: page("auth/register.vue") },
+  // {
+  //   path: "/password/reset",
+  //   name: "password.request",
+  //   component: page("auth/password/email.vue"),
+  // },
+  // {
+  //   path: "/password/reset/:token",
+  //   name: "password.reset",
+  //   component: page("auth/password/reset.vue"),
+  // },
+  // {
+  //   path: "/email/verify/:id",
+  //   name: "verification.verify",
+  //   component: page("auth/verification/verify.vue"),
+  // },
+  // {
+  //   path: "/email/resend",
+  //   name: "verification.resend",
+  //   component: page("auth/verification/resend.vue"),
+  // },
 
   // Public Content
 

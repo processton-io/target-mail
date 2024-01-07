@@ -29,7 +29,14 @@ if (process.env.SENTRY_AUTH_TOKEN) {
 
 export default defineConfig({
   build: {
-    sourcemap: process.env.SENTRY_AUTH_TOKEN ? true : 'inline'
+    sourcemap: process.env.SENTRY_AUTH_TOKEN ? true : 'inline',
+    rollupOptions: {
+        output: {
+            entryFileNames: `assets/[name].js`,
+            chunkFileNames: `assets/[name].js`,
+            assetFileNames: `assets/[name].[ext]`
+        }
+    }
   },
   esbuild: {
     minify: true,
