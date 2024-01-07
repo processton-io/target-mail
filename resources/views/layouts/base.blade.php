@@ -1,3 +1,24 @@
+@php
+  $config = [
+      'appName' => config('app.name'),
+      'locale' => $locale = app()->getLocale(),
+      'locales' => config('app.locales'),
+      'githubAuth' => config('services.github.client_id'),
+      'notion' => [
+          'worker' => config('services.notion.worker'),
+      ],
+      'links' => config('links'),
+      'production' => App::isProduction(),
+      'hCaptchaSiteKey' => config('services.h_captcha.site_key'),
+      'google_analytics_code' => config('services.google_analytics_code'),
+      'amplitude_code' => config('services.amplitude_code'),
+      'sentry_dsn' => config('services.sentry_vue_dsn'),
+      'crisp_website_id' => config('services.crisp_website_id'),
+      'ai_features_enabled' => !is_null(config('services.openai.api_key')),
+      's3_enabled' => config('filesystems.default') === 's3',
+      'paid_plans_enabled' => !is_null(config('cashier.key'))
+  ];
+@endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -18,7 +39,11 @@
     <link href="{{ asset(mix('app.css', 'vendor/sendportal')) }}" rel="stylesheet">
 
     @stack('css')
-
+    {{-- Global configuration object --}}
+    <script>
+        window.config = @json($config);
+        window.$crisp = []
+    </script>
 </head>
 <body>
 
