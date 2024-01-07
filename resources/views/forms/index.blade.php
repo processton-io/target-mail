@@ -20,5 +20,5 @@
     </div>
     
     
-    <script src="{{ asset('vendor/sendportal/build/assets/app.js') }}"></script>
+    <script type="module" src="{{ asset('vendor/sendportal/build/assets/app.js') }}"></script>
 @endsection
