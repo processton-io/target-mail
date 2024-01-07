@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <link href="{{ asset('vendor/sendportal/build/assets/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/sendportal/build/assets/main.css') }}" rel="stylesheet">
     @component('sendportal::layouts.partials.actions')
         @slot('right')
             <a class="btn btn-primary btn-md btn-flat" href="{{ route('sendportal.email_services.create') }}">
@@ -20,5 +20,5 @@
     </div>
     
     
-    <script type="module" src="{{ asset('vendor/sendportal/build/assets/app.js') }}"></script>
+    <script type="module" src="{{ asset('vendor/sendportal/build/assets/main.js') }}"></script>
 @endsection
